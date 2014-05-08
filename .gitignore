@@ -1,0 +1,4 @@
+gwt-unitcache/
+*.class
+war/datavisualizer/
+war/WEB-INF/deploy/

@@ -1,0 +1,55 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+    xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+        .content {
+            background: url(bg.jpg);
+            padding: 20px;
+        }
+        
+        .caption {
+            font-weight: bold;
+            font-family: 'Open Sans', sans-serif;
+            color: #EEE;
+            text-shadow: 3px 3px 3px #888;
+            padding: 10px;
+        }
+        
+        button {
+            outline: 0;
+            border: 0;
+            background: rgba(0,0,0,0.5);
+            color: #AAA;
+            cursor: pointer;
+            padding: 10px;
+            font-weight: bold;
+        }
+        
+        button[disabled] {
+            visibility: hidden;
+        }
+        
+        button:hover {
+            color: #FFF;
+            text-decoration: underline;
+        }
+        
+        button.left {
+            
+        }
+        
+        button.right {
+            float: right;
+        }
+    </ui:style>
+    <g:FocusPanel ui:field="focus">
+        <g:HTMLPanel ui:field="container" styleName="{style.content}">
+            <g:Label ui:field="caption" styleName="{style.caption}"></g:Label>
+            <g:Image ui:field="image"></g:Image>
+            <div>
+                <g:Button ui:field="previous" text="&lt; Prev" styleName="{style.left}"></g:Button>
+                <g:Button ui:field="next" text="Next &gt;" styleName="{style.right}"></g:Button>
+            </div>
+        </g:HTMLPanel>
+    </g:FocusPanel>
+</ui:UiBinder> 

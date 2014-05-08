@@ -1,0 +1,93 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+    xmlns:g="urn:import:com.google.gwt.user.client.ui">
+    <ui:style>
+        
+        .container {
+            border-radius: 0px 0px 5px 5px;
+            background-color: #DDD;
+            float: left;
+            margin: 15px;
+            padding: 10px;
+            
+            box-shadow: 0px 0px 10px #000;
+            opacity: 0.6;
+        }
+        
+        .container:hover {
+            box-shadow: 0px 0px 20px gold;
+            opacity: 1 !important;
+        }
+        
+        .name {
+        }
+        
+        .nameContainer {
+            background-color: #333;
+            color: #EEE;
+            padding: 10px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-weight: bold;
+            text-shadow: 3px 3px 3px #888;
+        }
+        
+        .image {
+            margin: 5px;
+        }
+        
+        .imageContainer {
+            background: #666666;
+            margin: 5px;
+            border-radius: 5px;
+        }
+        
+        .stamp {
+            -ms-transform: rotate(45deg);
+            -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+            background-color: gold;
+        }
+        
+        .stampContainer {
+            overflow: hidden;
+            position: absolute;
+            top: 0px;
+            right: -41px;
+            height: 30px;
+            width: 100px;
+            text-align: center;
+        }
+    </ui:style>
+    <g:FocusPanel ui:field="focus">
+        <g:DockLayoutPanel ui:field="container" unit="PX" height="140px" width="220px" styleName="{style.container}">
+            <g:north size="40">
+                <g:FlowPanel styleName="{style.nameContainer}">
+                    <g:InlineLabel ui:field="name" styleName="{style.name}"></g:InlineLabel>
+                    <g:SimplePanel ui:field="stamp" styleName="{style.stampContainer}">
+                        <g:SimplePanel styleName="{style.stamp}">
+                            <g:Label text="&nbsp;"/>
+                        </g:SimplePanel>
+                    </g:SimplePanel>
+                </g:FlowPanel>
+            </g:north>
+            <g:center>
+                <g:DockLayoutPanel unit="PX">
+                    <g:west size="120">
+                        <g:SimplePanel styleName="{style.imageContainer}">
+                            <g:Image ui:field="image" width="100px" styleName="{style.image}"></g:Image>
+                        </g:SimplePanel>
+                    </g:west>
+                    <g:center>
+                        <g:FlowPanel ui:field="body">
+                            <g:Anchor ui:field="shop"></g:Anchor>
+                            <g:Label ui:field="price"></g:Label>
+                            <g:Label ui:field="date"></g:Label>
+                        </g:FlowPanel>
+                    </g:center>
+                </g:DockLayoutPanel>
+            </g:center>
+        </g:DockLayoutPanel>
+    </g:FocusPanel>
+</ui:UiBinder> 
